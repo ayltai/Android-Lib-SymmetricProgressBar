@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SymmetricProgressBar">
+        <attr
+            name="colors"
+            format="reference" />
+        <attr
+            name="interpolator"
+            format="reference" />
+        <attr
+            name="duration"
+            format="reference|integer" />
+    </declare-styleable>
+</resources>
