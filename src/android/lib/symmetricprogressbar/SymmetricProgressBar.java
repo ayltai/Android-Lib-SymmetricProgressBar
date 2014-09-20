@@ -37,7 +37,7 @@ public class SymmetricProgressBar extends View implements Animator.AnimatorListe
     }
 
     public SymmetricProgressBar(final Context context, final AttributeSet attrs) {
-        super(context);
+        super(context, attrs);
 
         final TypedArray array;
         final int[]      colors;
