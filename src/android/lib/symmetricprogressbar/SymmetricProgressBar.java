@@ -60,17 +60,9 @@ public class SymmetricProgressBar extends View implements Animator.AnimatorListe
             this.setInterpolator(context, interpolatorResId);
         }
 
-        final int durationResId = array == null ? R.integer.SymmetricProgressBar_duration : array.getResourceId(R.styleable.SymmetricProgressBar_duration, 0);
-
-        if (durationResId > 0) {
-            this.setDuration(context.getResources().getInteger(durationResId));
-        } else {
-            final int duration = array == null ? context.getResources().getInteger(R.integer.SymmetricProgressBar_duration) : array.getInt(R.styleable.SymmetricProgressBar_duration, context.getResources().getInteger(R.integer.SymmetricProgressBar_duration));
-
-            this.setDuration(duration);
-        }
-
         if (array != null) {
+            this.setDuration(array.getInteger(R.styleable.SymmetricProgressBar_duration, context.getResources().getInteger(R.integer.SymmetricProgressBar_duration)));
+
             array.recycle();
         }
     }
