@@ -159,7 +159,7 @@ public class SymmetricProgressBar extends View implements Animator.AnimatorListe
             for (int i = 0; i < this.animators.size(); i++) {
                 final ValueAnimator animator = this.animators.get(i);
 
-                animator.setRepeatMode(Animation.RESTART);
+                animator.setRepeatMode(ValueAnimator.RESTART);
                 animator.setRepeatCount(Animation.INFINITE);
                 animator.setDuration(this.duration / this.colors.size() * this.colors.size());
                 animator.setInterpolator(this.interpolator);
@@ -232,7 +232,7 @@ public class SymmetricProgressBar extends View implements Animator.AnimatorListe
 
                     for (int i = 0; i < this.drawables.size(); i++) {
                         final Drawable drawable = this.drawables.get(i);
-                        final float    fraction = ((Float)this.animators.get(i).getAnimatedValue()).floatValue();
+                        final float    fraction = (Float) this.animators.get(i).getAnimatedValue();
 
                         canvas.save();
                         canvas.clipRect(this.getWidth() / 2f * (1f - fraction), 0, this.getWidth() / 2f * (1f + fraction), this.getHeight());
